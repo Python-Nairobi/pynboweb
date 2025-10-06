@@ -354,7 +354,7 @@ export default function Navbar1() {
                           <Link href="/2025">2025</Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
-                          <Link href="/2022">2022</Link>
+                          <a href="/2022">2022</a>
                         </DropdownMenuItem>
                         <DropdownMenuItem>2018</DropdownMenuItem>
                         <DropdownMenuItem>2017</DropdownMenuItem>
