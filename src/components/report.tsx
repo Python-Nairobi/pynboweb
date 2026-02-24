@@ -208,7 +208,7 @@ export default function PyConKenyaReport({
                     <p className="text-gray-600 leading-relaxed">
                       {atmosphereText
                         ? atmosphereText
-                        : `The conference fostered an incredibly collaborative and inclusive environment. Attendees praised the high-quality content, networking opportunities, and the strong sense of community. The event successfully bridged the gap between academia and industry, with meaningful connections formed across all experience levels.`}
+                        : "The conference fostered an incredibly collaborative and inclusive environment. Attendees praised the high-quality content, networking opportunities, and the strong sense of community. The event successfully bridged the gap between academia and industry, with meaningful connections formed across all experience levels."}
                     </p>
                   </div>
                 </div>
@@ -260,13 +260,16 @@ export default function PyConKenyaReport({
                   <div className="space-y-4">
                     {/* Group sessions by time slot */}
                     {Object.entries(
-                      day.sessions.reduce((acc, session) => {
-                        if (!acc[session.time]) {
-                          acc[session.time] = [];
-                        }
-                        acc[session.time].push(session);
-                        return acc;
-                      }, {} as Record<string, Session[]>)
+                      day.sessions.reduce(
+                        (acc, session) => {
+                          if (!acc[session.time]) {
+                            acc[session.time] = [];
+                          }
+                          acc[session.time].push(session);
+                          return acc;
+                        },
+                        {} as Record<string, Session[]>,
+                      ),
                     ).map(([time, sessions]) => (
                       <div
                         key={time}
@@ -410,7 +413,7 @@ export default function PyConKenyaReport({
                         {statistics.students} (
                         {Math.round(
                           (statistics.students / statistics.totalAttendees) *
-                            100
+                            100,
                         )}
                         %)
                       </span>
@@ -430,7 +433,7 @@ export default function PyConKenyaReport({
                         {Math.round(
                           (statistics.professionals /
                             statistics.totalAttendees) *
-                            100
+                            100,
                         )}
                         %)
                       </span>
