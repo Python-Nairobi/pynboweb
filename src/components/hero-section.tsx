@@ -20,7 +20,7 @@ export default function HeroSection() {
             </RainbowButton>
             <RainbowGreyButton>
               <a
-                href="https://pycon-kenya-2025.sessionize.com"
+                href="https://pretalx.com/pycon-kenya-2026/cfp"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -31,7 +31,7 @@ export default function HeroSection() {
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
             Welcome to PyCon Kenya 2026
           </h1>
-          <h3 className="pt-6 text-2xl">28th - 29th August, 2026</h3>
+          <h3 className="pt-6 text-2xl">2nd - 3rd October, 2026</h3>
           <h4 className="pt-6 text-1xl">TBC</h4>
           <h4 className="pt-6 text-1xl">
             <a
