@@ -1,5 +1,5 @@
-import BlurFade from "@/components/ui/blur-fade";
 import Image from "next/image";
+import BlurFade from "@/components/ui/blur-fade";
 
 export default function Gallery({ images }: { images: string[] }) {
   return (

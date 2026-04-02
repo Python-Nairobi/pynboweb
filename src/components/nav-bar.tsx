@@ -1,4 +1,16 @@
 import {
+  Book,
+  CalendarClock,
+  Menu,
+  PhoneCall,
+  ShieldCheck,
+  Target,
+  Trees,
+  Users,
+  Zap,
+} from "lucide-react";
+import Link from "next/link";
+import {
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -28,18 +40,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import {
-  Book,
-  CalendarClock,
-  Menu,
-  PhoneCall,
-  ShieldCheck,
-  Target,
-  Trees,
-  Users,
-  Zap,
-} from "lucide-react";
-import Link from "next/link";
 
 const subMenuItemsOne = [
   {
@@ -295,7 +295,7 @@ export default function Navbar1() {
                         Program
                       </AccordionTrigger>
                       <AccordionContent className="mt-2">
-                        {subMenuItemsTwo.map((item, idx) => (
+                        {subMenuItemsTwo.map((item) => (
                           <a
                             key={item.title}
                             className={cn(

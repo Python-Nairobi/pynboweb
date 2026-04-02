@@ -1,7 +1,7 @@
+import { notFound } from "next/navigation";
 import { CustomMdx } from "@/components/mdx";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import { getArticles } from "@/lib/mdx";
-import { notFound } from "next/navigation";
 
 export default async function Article(props: {
   params: Promise<{ slug: string }>;

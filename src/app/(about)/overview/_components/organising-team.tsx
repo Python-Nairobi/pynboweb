@@ -1,15 +1,9 @@
 "use client";
-import { useOutsideClick } from "@/hooks/use-outside-click";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import Image from "next/image";
-import React, {
-  type RefObject,
-  useEffect,
-  useId,
-  useRef,
-  useState,
-} from "react";
+import { type RefObject, useEffect, useId, useRef, useState } from "react";
+import { useOutsideClick } from "@/hooks/use-outside-click";
 
 const team = [
   {

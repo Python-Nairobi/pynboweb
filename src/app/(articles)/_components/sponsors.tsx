@@ -1,5 +1,5 @@
-import { sponsors } from "@/lib/constants";
 import Image from "next/image";
+import { sponsors } from "@/lib/constants";
 
 export default function Sponsors() {
   const years = [...new Set(sponsors.flatMap((sponsor) => sponsor.year))]

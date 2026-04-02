@@ -7,7 +7,7 @@ type Metadata = {
 };
 
 const frontmatterRegex = /---\s*([\s\S]*?)\s*---/;
-const quoteRegex = /^['\"](.*)['\"]\$/;
+const quoteRegex = /^['"](.*)['"]\$/;
 
 function parseFrontmatter(fileContent: string) {
   const match = frontmatterRegex.exec(fileContent);

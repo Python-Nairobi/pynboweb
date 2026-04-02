@@ -1,9 +1,9 @@
-import Sponsors from "@/app/(articles)/_components/sponsors";
-import { cn } from "@/lib/utils";
-import { MDXRemote, type MDXRemoteProps } from "next-mdx-remote/rsc";
 import Image, { type ImageProps } from "next/image";
+import { MDXRemote, type MDXRemoteProps } from "next-mdx-remote/rsc";
 import type React from "react";
 import type { JSX } from "react";
+import Sponsors from "@/app/(articles)/_components/sponsors";
+import { cn } from "@/lib/utils";
 
 function slugify(str: string) {
   return str
@@ -12,8 +12,8 @@ function slugify(str: string) {
     .trim() // Remove whitespace from both ends of a string
     .replace(/\s+/g, "-") // Replace spaces with -
     .replace(/&/g, "-and-") // Replace & with 'and'
-    .replace(/[^\w\-]+/g, "") // Remove all non-word characters except for -
-    .replace(/\-\-+/g, "-"); // Replace multiple - with single -
+    .replace(/[^\w-]+/g, "") // Remove all non-word characters except for -
+    .replace(/--+/g, "-"); // Replace multiple - with single -
 }
 
 function createHeading(level: 1 | 2 | 3 | 4 | 5 | 6) {
@@ -49,7 +49,6 @@ const components = {
   h4: createHeading(4),
   h5: createHeading(5),
   h6: createHeading(6),
-  // biome-ignore lint/style/useNamingConvention: <explanation>
   Sponsors: Sponsors,
 
   a: ({ className = "" as string, ...props }) => (
@@ -79,7 +78,6 @@ const components = {
       {...props}
     />
   ),
-  // biome-ignore lint/style/useNamingConvention: This is used by MDX
   Image: (props: ImageProps) => (
     <Image className="my-6 rounded-lg" {...props} />
   ),

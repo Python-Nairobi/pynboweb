@@ -3,11 +3,11 @@ import { useEffect } from "react";
 
 export const useOutsideClick = (
   ref: React.RefObject<HTMLDivElement>,
-  // biome-ignore lint/complexity/noBannedTypes: <explanation>
+  // biome-ignore lint/complexity/noBannedTypes: intentional
   callback: Function,
 ) => {
   useEffect(() => {
-    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    // biome-ignore lint/suspicious/noExplicitAny: intentional
     const listener = (event: any) => {
       if (!ref.current || ref.current.contains(event.target)) {
         return;

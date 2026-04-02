@@ -1,15 +1,3 @@
-import Gallery from "@/components/gallery";
-import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
-import { Separator } from "@/components/ui/separator";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Award,
   Calendar,
@@ -22,7 +10,18 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react";
-import Image from "next/image";
+import Gallery from "@/components/gallery";
+import { Badge } from "@/components/ui/badge";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
+import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 type Session = {
   time: string;
@@ -36,13 +35,6 @@ type Session = {
 type ScheduleDay = {
   date: string;
   sessions: Session[];
-};
-
-type Speaker = {
-  name: string;
-  role: string;
-  company: string;
-  country: string;
 };
 
 type Statistics = {
@@ -280,7 +272,7 @@ export default function PyConKenyaReport({
                           {time}
                         </div>
                         <div className="grid gap-4 md:grid-cols-2">
-                          {sessions.map((session, sessionIndex) => (
+                          {sessions.map((session) => (
                             <div
                               key={`${day.date}-${session.time}-${session.title}`}
                               className="flex flex-col gap-2 p-3 rounded-md border bg-gray-50"
@@ -457,7 +449,7 @@ export default function PyConKenyaReport({
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
-                    {statistics.distributionByCountry.map((item, index) => (
+                    {statistics.distributionByCountry.map((item) => (
                       <div
                         key={item.country}
                         className="flex items-center justify-between"
