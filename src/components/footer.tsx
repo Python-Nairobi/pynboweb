@@ -27,9 +27,9 @@ const sections = [
     ],
   },
 ];
+const currentYear = new Date().getFullYear();
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
   return (
     <section className="border-t relative overflow-hidden py-10">
       <div className="container mx-auto max-w-7xl px-8">
