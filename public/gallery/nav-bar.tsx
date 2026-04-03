@@ -1,16 +1,4 @@
 import {
-  Book,
-  CalendarClock,
-  Menu,
-  PhoneCall,
-  ShieldCheck,
-  Target,
-  Trees,
-  Users,
-  Zap,
-} from "lucide-react";
-import Link from "next/link";
-import {
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -40,6 +28,18 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import {
+  Book,
+  CalendarClock,
+  Menu,
+  PhoneCall,
+  ShieldCheck,
+  Target,
+  Trees,
+  Users,
+  Zap,
+} from "lucide-react";
+import Link from "next/link";
 
 const subMenuItemsOne = [
   {
@@ -123,7 +123,7 @@ export default function Navbar1() {
                   navigationMenuTriggerStyle,
                   buttonVariants({
                     variant: "ghost",
-                  }),
+                  })
                 )}
                 href="/"
               >
@@ -142,7 +142,7 @@ export default function Navbar1() {
                             <li key={item.title}>
                               <a
                                 className={cn(
-                                  "flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                                  "flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                                 )}
                                 href={item.url}
                               >
@@ -171,7 +171,7 @@ export default function Navbar1() {
                             <li key={item.title}>
                               <a
                                 className={cn(
-                                  "flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                                  "flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                                 )}
                                 href={item.url}
                               >
@@ -200,7 +200,7 @@ export default function Navbar1() {
                   navigationMenuTriggerStyle,
                   buttonVariants({
                     variant: "ghost",
-                  }),
+                  })
                 )}
                 href="/sponsors"
               >
@@ -279,7 +279,7 @@ export default function Navbar1() {
                           <a
                             key={item.title}
                             className={cn(
-                              "flex select-none gap-4 rounded-md p-3 leading-none outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                              "flex select-none gap-4 rounded-md p-3 leading-none outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                             )}
                             href={item.url}
                           >
@@ -298,11 +298,11 @@ export default function Navbar1() {
                         Program
                       </AccordionTrigger>
                       <AccordionContent className="mt-2">
-                        {subMenuItemsTwo.map((item) => (
+                        {subMenuItemsTwo.map((item, idx) => (
                           <a
                             key={item.title}
                             className={cn(
-                              "flex select-none gap-4 rounded-md p-3 leading-none outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                              "flex select-none gap-4 rounded-md p-3 leading-none outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                             )}
                             href={item.url}
                           >
@@ -328,7 +328,7 @@ export default function Navbar1() {
                         buttonVariants({
                           variant: "ghost",
                         }),
-                        "justify-start text-muted-foreground",
+                        "justify-start text-muted-foreground"
                       )}
                       href="/terms-and-conditions"
                     >
@@ -339,7 +339,7 @@ export default function Navbar1() {
                         buttonVariants({
                           variant: "ghost",
                         }),
-                        "justify-start text-muted-foreground",
+                        "justify-start text-muted-foreground"
                       )}
                       href="/privacy-policy"
                     >
@@ -354,7 +354,7 @@ export default function Navbar1() {
                           <Link href="/2025">2025</Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
-                          <Link href="/2022">2022</Link>
+                          <a href="/2022">2022</a>
                         </DropdownMenuItem>
                         <DropdownMenuItem>2018</DropdownMenuItem>
                         <DropdownMenuItem>2017</DropdownMenuItem>

@@ -70,6 +70,9 @@ type Props = {
   statistics: Statistics;
   topicDistribution: TopicDistribution[];
   images: string[];
+  achievements?: string[];
+  atmosphereTitle?: string;
+  atmosphereText?: string;
 };
 
 export default function PyConKenyaReport({
@@ -80,6 +83,9 @@ export default function PyConKenyaReport({
   statistics,
   topicDistribution,
   images,
+  achievements,
+  atmosphereTitle,
+  atmosphereText,
 }: Props) {
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -173,35 +179,28 @@ export default function PyConKenyaReport({
                       🎯 Key Achievements
                     </h3>
                     <ul className="space-y-2 text-gray-600">
-                      <li>
-                        • Largest PyCon Kenya attendance to date with{" "}
-                        {statistics.totalAttendees}+ participants
-                      </li>
-                      <li>
-                        • {statistics.speakers} expert speakers from{" "}
-                        {statistics.countries} different countries
-                      </li>
-                      <li>
-                        • {statistics.workshops} hands-on workshops covering
-                        cutting-edge technologies
-                      </li>
-                      <li>
-                        • {statistics.companies}+ companies represented across
-                        various industries
-                      </li>
+                      {(achievements && achievements.length > 0
+                        ? achievements
+                        : [
+                            `• Largest PyCon Kenya attendance to date with ${statistics.totalAttendees}+ participants`,
+                            `• ${statistics.speakers} expert speakers from ${statistics.countries} different countries`,
+                            `• ${statistics.workshops} hands-on workshops covering cutting-edge technologies`,
+                            `• ${statistics.companies}+ companies represented across various industries`,
+                          ]
+                      ).map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
                     </ul>
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-3">
-                      🌟 Event Atmosphere
+                      🌟{" "}
+                      {atmosphereTitle ? atmosphereTitle : "Event Atmosphere"}
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      The conference fostered an incredibly collaborative and
-                      inclusive environment. Attendees praised the high-quality
-                      content, networking opportunities, and the strong sense of
-                      community. The event successfully bridged the gap between
-                      academia and industry, with meaningful connections formed
-                      across all experience levels.
+                      {atmosphereText
+                        ? atmosphereText
+                        : "The conference fostered an incredibly collaborative and inclusive environment. Attendees praised the high-quality content, networking opportunities, and the strong sense of community. The event successfully bridged the gap between academia and industry, with meaningful connections formed across all experience levels."}
                     </p>
                   </div>
                 </div>
@@ -479,7 +478,7 @@ export default function PyConKenyaReport({
               <CardHeader>
                 <CardTitle>Event Impact & Success Metrics</CardTitle>
                 <CardDescription>
-                  Measuring the success and impact of PyCon Kenya 2024
+                  Measuring the success and impact of PyCon Kenya {year}
                 </CardDescription>
               </CardHeader>
               <CardContent>
