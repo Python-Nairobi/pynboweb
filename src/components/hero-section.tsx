@@ -20,7 +20,7 @@ export default function HeroSection() {
             </RainbowButton>
             <RainbowGreyButton>
               <a
-                href="https://pretalx.com/pycon-kenya-2026/cfp"
+                href="https://cfp.pycon.ke/pycon-kenya-2026/cfp"
                 target="_blank"
                 rel="noreferrer"
               >

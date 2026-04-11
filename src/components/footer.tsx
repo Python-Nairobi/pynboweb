@@ -27,6 +27,7 @@ const sections = [
     ],
   },
 ];
+const currentYear = new Date().getFullYear();
 
 export default function Footer() {
   return (
@@ -59,7 +60,7 @@ export default function Footer() {
             ))}
           </div>
           <div className="mt-24 flex flex-col justify-between gap-4 border-t pt-8 text-sm font-medium text-muted-foreground md:flex-row md:items-center">
-            <p>© 2025 PyConKE. All rights reserved.</p>
+            <p>© {currentYear} PyConKE. All rights reserved.</p>
             <ul className="flex gap-4">
               <li className="underline hover:text-primary">
                 <a href="/terms-and-conditions"> Terms and Conditions</a>
