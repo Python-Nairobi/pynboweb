@@ -11,7 +11,7 @@ export default function HeroSection() {
           <div className="flex justify-center gap-4 mb-10">
             <RainbowButton>
               <a
-                href="https://paystack.com/buy/pyconke-2026-early-bird"
+                href="https://paystack.com/buy/pyconke-2026-normal-pass"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -21,7 +21,7 @@ export default function HeroSection() {
             <RainbowGreyButton>
               <a href="/tickets/student">Student Ticket</a>
             </RainbowGreyButton>
-            <RainbowGreyButton>
+            {/* <RainbowGreyButton>
               <a
                 href="https://cfp.pycon.ke/pycon-kenya-2026/cfp"
                 target="_blank"
@@ -29,7 +29,7 @@ export default function HeroSection() {
               >
                 Call For Speakers
               </a>
-            </RainbowGreyButton>
+            </RainbowGreyButton> */}
           </div>
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
             Welcome to PyCon Kenya 2026
