@@ -18,6 +18,9 @@ export default function HeroSection() {
                 Get Your Ticket
               </a>
             </RainbowButton>
+            <RainbowGreyButton>
+              <a href="/tickets/student">Student Ticket</a>
+            </RainbowGreyButton>
             {/* <RainbowGreyButton>
               <a
                 href="https://cfp.pycon.ke/pycon-kenya-2026/cfp"
